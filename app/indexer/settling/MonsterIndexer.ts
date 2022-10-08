@@ -5,11 +5,12 @@ import BaseContractIndexer from "./../BaseContractIndexer";
 
 const CONTRACT =
 "0x058bf65283a345d04299b2c04fdba55f6a83e1f598adc809940d1ff2fb2c579c";
-  
+
+const overflow = 2**64;
+
 export default class MonsterIndexer extends BaseContractIndexer {
   constructor(context: Context) {
     super(context, CONTRACT);
-
 
     this.on("TransferMonster", this.transferMonster.bind(this));
     this.on("UpdateMonsterAfterRampage", this.updateMonsterAfterRampage.bind(this));
@@ -90,12 +91,12 @@ export default class MonsterIndexer extends BaseContractIndexer {
     const params = event.parameters ?? [];
 
     try {
-
+      let hp = 0;
       const monsterIdx = parseInt(params[0]);  
-      const hp = parseInt(params[2]);
+      if (parseInt(params[2]) < overflow){
+        hp = parseInt(params[2]);
+      }
       const xp = parseInt(params[3]);
-      
-     
       
       await this.context.prisma.monster.upsert({
         where: {
