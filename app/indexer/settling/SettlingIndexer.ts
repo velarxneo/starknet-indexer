@@ -3,7 +3,7 @@ import { Context } from "./../../context";
 import BaseContractIndexer from "./../BaseContractIndexer";
 
 const CONTRACT =
-  "0x02b4b514e756a7f505711383261214873fe44ba19974f0e0352dce3b5c890d76";
+  "0x073dfd2c2d442636a66cc9a10d32e31db91d0ba254d22ac196e928e13e01292f";
 
 const START_BLOCK = 241365;
 

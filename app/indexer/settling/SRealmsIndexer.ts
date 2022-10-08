@@ -4,7 +4,7 @@ import { BigNumber } from "ethers";
 import BaseContractIndexer from "./../BaseContractIndexer";
 
 const CONTRACT =
-  "0x06f798682fc548e98a9556b624eb110f1bc37eeadd16bc2f49056f8ede7993c5";
+  "0x0332b15b95e542c2fcf17d1f30f405e60709c909d899e7e31062f9b5b818b63b";
 
 export default class SRealmsIndexer extends BaseContractIndexer {
   constructor(context: Context) {

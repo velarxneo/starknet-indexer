@@ -432,3 +432,21 @@ model Travel {
   destinationArrivalTime DateTime
   timestamp              DateTime
 }
+
+model Monster {
+  id            Int        @id @default(autoincrement())
+  monsterId     Int         @unique
+  realmId       Int      
+  owner         String
+  imageUrl      String
+  name          String
+  monster_class String
+  rarity        String
+  level         Int 
+  xp            Int 
+  hp            Int 
+  attack_power  Int 
+  defence_power Int 
+  eventIndexed  String?
+ 
+}

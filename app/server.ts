@@ -8,6 +8,7 @@ import { context } from "./context";
 import {
   WalletResolver,
   RealmResolver,
+  MonsterResolver,
   BuildingResolver,
   ResourceResolver,
   TroopResolver,
@@ -19,7 +20,7 @@ import {
   TravelResolver
 } from "./resolvers";
 import { StarkNet } from "./indexer/Starknet";
-import { RealmsL1Indexer } from "./indexer/RealmsL1Indexer";
+//import { RealmsL1Indexer } from "./indexer/RealmsL1Indexer";
 import { LoreResolver } from "./resolvers/lore/LoreResolver";
 import { LorePOIResolver } from "./resolvers/lore/LorePOIResolver";
 
@@ -31,6 +32,7 @@ const main = async () => {
   const schema = await buildSchema({
     resolvers: [
       RealmResolver,
+      MonsterResolver,
       TroopResolver,
       WalletResolver,
       BuildingResolver,
@@ -68,8 +70,8 @@ const main = async () => {
       `🚀 Server ready and listening at ==> http://localhost:3333${server.graphqlPath}`
     )
   );
-  const realmsL1Indexer = new RealmsL1Indexer(context);
-  await realmsL1Indexer.start();
+  //const realmsL1Indexer = new RealmsL1Indexer(context);
+  //await realmsL1Indexer.start();
 
   if (process.env.NETWORK === "goerli") {
     await StarkNet().serverWillStart();

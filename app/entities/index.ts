@@ -2,6 +2,7 @@ import { Desiege } from "./desiege/Desiege";
 import { LoreEntity } from "./lore/LoreEntitiy";
 import {
   Realm,
+  Monster,
   Building,
   Resource,
   ResourceAmount,
@@ -25,6 +26,7 @@ import { Wallet } from "./wallet/Wallet";
 export {
   Desiege,
   Realm,
+  Monster,
   RealmHistory,
   Wallet,
   Building,

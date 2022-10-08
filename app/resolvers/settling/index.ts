@@ -1,5 +1,6 @@
 import { BuildingResolver } from "./BuildingResolver";
 import { RealmResolver } from "./RealmResolver";
+import { MonsterResolver } from "./MonsterResolver";
 import { ResourceResolver } from "./ResourceResolver";
 import { RealmHistoryResolver } from "./RealmHistoryResolver";
 import { RealmTraitResolver } from "./RealmTraitResolver";
@@ -13,6 +14,7 @@ export {
   BuildingResolver,
   ResourceResolver,
   RealmResolver,
+  MonsterResolver,
   RealmTraitResolver,
   ExchangeRateResolver,
   TroopResolver,

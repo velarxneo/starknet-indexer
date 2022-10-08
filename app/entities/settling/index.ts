@@ -1,4 +1,5 @@
 import { Realm } from "./Realm";
+import { Monster } from "./Monster";
 import { Building } from "./Building";
 import { Resource } from "./Resource";
 import { ResourceAmount } from "./ResourceAmount";
@@ -18,6 +19,7 @@ import { BattalionCost } from "./BattalionCost";
 import { BattalionStats } from "./BattalionStats";
 export {
   Realm,
+  Monster,
   RealmHistory,
   Troop,
   TroopCost,

@@ -1,6 +1,6 @@
 import { context } from "./../context";
 import DesiegeIndexer from "./desiege/DesiegeIndexer";
-import LoreIndexer from "./lore/LoreIndexer";
+//import LoreIndexer from "./lore/LoreIndexer";
 import BuildingIndexer from "./settling/BuildingIndexer";
 import RealmsL2Indexer from "./settling/RealmsL2Indexer";
 import SRealmsIndexer from "./settling/SRealmsIndexer";
@@ -13,6 +13,7 @@ import SettlingIndexer from "./settling/SettlingIndexer";
 import RelicIndexer from "./settling/RelicIndexer";
 import FoodIndexer from "./settling/FoodIndexer";
 import TravelIndexer from "./settling/TravelIndexer";
+import MonsterIndexer from "./settling/MonsterIndexer";
 
 // import GoblinIndexer from "./settling/GoblinIndexer";
 
@@ -22,8 +23,10 @@ export const StarkNet = () => {
       const indexer = new StarknetIndexer(
         [
           new DesiegeIndexer(context),
-          new LoreIndexer(context),
+         
+          //new LoreIndexer(context),
           new RealmsL2Indexer(context),
+          new MonsterIndexer(context),
           new SRealmsIndexer(context),
           new ResourceIndexer(context),
           new BuildingIndexer(context),
